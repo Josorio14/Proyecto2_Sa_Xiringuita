@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts\Roboto);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{  
+    --color-negro: #121212;
+    --color-negro-claro: #1B1B1B;
+    --color-blanco: #f6f6f6;
+    --color-rosa: #ff66c4;
+    --color-carmesi: #d90037;
+}
+
+body{
+    background-color: var(--color-negro);
+}
+
+
+/* ======HEADER========*/
+.header-bar {
+    /*Sebas estos valores son todo el position*/
+    position: fixed;
+    top: 10px; 
+    z-index: 1000;
+
+    /*Estos dan el ancho del bloque y lo centra*/
+    display: inline-block; 
+    width: 90%;       
+    margin: 10px 5%;   
+
+    background: rgba(17, 17, 17, 0.89); 
+    border: 2px solid rgba(78, 77, 77, 0.35);
+    border-radius: 60px;
+    padding: 12px 20px;
+}
+
+.header-bar img:first-child{
+    width: auto;
+    height: 90px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header img:last-child{
+    position: absolute;
+    top: 300px;
+    left: 460px;
+    width: 1000px;
+    height: 300px;
+}
+
+/* Nav al lado derecho */
+.header-bar nav{
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 220px); /* resto del ancho */
+    text-align: right;
+}
+.header-nav ul {
+    list-style: none;
+}
+.header-bar li {
+    display: inline-block;
+}
+.header-bar a {
+    text-decoration: none;
+    color: var(--color-blanco);
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.header-bar a:hover {
+    color: var(--color-carmesi); 
+}
+/* ======== VIDEO ======== */
+.seccion-video video {
+    width: 100%;
+    display: block;
+}
+/*fin del apartado header*/
+
+h1{
+    text-align: center;
+    color: var(--color-blanco);
+    margin: 100px;
+    font-size: 30px;
+}
+/* ======== FOOTER ======== */
+footer {
+    color: var(--color-blanco); 
+    background-color: var(--color-negro-claro);
+    padding: 30px 20px;
+    text-align: center;
+}
+.footer-section {
+    display: inline-block;
+    width: 22%;
+    vertical-align: top;
+    text-align: left;
+    margin: 10px 1%;
+}
+.footer-section img{
+    width: 150px;
+    margin: 10px 50px 10px 50px;
+}
+.footer-section pre, a{
+    margin: 10px;
+    color: var(--color-blanco);
+    text-decoration: none;
+}
+
+.footer-section h3{
+    color: var(--color-rosa);
+}
+.footer-section nav{
+    margin: 20px 200px 10px -100px;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--color-rosa);
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: 13px;
+    color: var(--color-rosa);
+    
+}
+/* Media query para TABLET  */
+@media (max-width: 820px) {
+    .header-bar img:first-child{
+    height: 70px;
+    }
+    .header-bar nav {
+        width: 500px;
+        text-align: center;
+        margin-left: 70px;
+    }
+
+    header img:last-child{
+    position: absolute;
+    top: 150px;
+    left: 200px;
+    width: 450px;
+    height: 200px;
+}
+
+
+/*=====INICIO FOOTER======*/
+
+    .footer-section p:first-of-type {
+        text-align: center;
+    }
+    .footer-section img {
+        width: 125px;
+    }
+    
+    .footer-section {
+        width: 22%;
+        font-size: 14px;
+    }
+
+    .footer-section h3{
+        font-size: 16px;
+        margin: 5px 5px 5px 20px;
+    }
+    .footer-section nav{
+    margin:0px 0px 0px 10px;
+    
+    }
+        .footer-section a{
+        display: block;
+    }
+}
+
+
+#menu-btn {
+    display: none; /* Imagen del menú, oculta el elemento */
+}
+/*=====Media query para MOVIL=====*/
+@media (max-width: 470px) {
+    .header-bar img:first-child{
+    height: 70px;
+    }
+    /* Mostrar la imagen que estaba oculta */
+    #menu-btn {
+        display: inline-block;
+        width: 30px; 
+        margin-left: 190px; /* Espacio entre el logo y el menú */
+        vertical-align: middle;
+        cursor:pointer;
+    }
+    .header-bar nav {
+        display: none; 
+        width: 100%;
+        text-align: center;
+        margin: 0px auto;   
+    }
+    .header-bar nav.show {
+        display: block;
+    }
+    .header-bar li {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .seccion-video {
+        height: 40vh; 
+    }
+    .seccion-video video {
+        height: 100%; 
+        object-fit: cover;  /* Hace que el video cubra el contenedor sin distorsionarse */
+    }
+
+    header img:last-child{
+        display: none;
+    }
+    /*fin del header*/
+
+    h1{
+        font-size: 25px;
+        margin: 30px;
+        margin-top: 50px;
+    }
+
+    /*=====INICIO FOOTER======*/
+    .footer-section {
+        width: 100%;
+    }
+
+    .footer-section img{
+        width: 125px;
+        margin-left:140px;
+    }
+    .footer-section h3{
+        font-size: 16px;
+        margin: 5px;
+    }
+        .footer-section pre, a{
+        margin: 10px;
+    }
+    .footer-section nav{
+    margin:0px;
+}
+}

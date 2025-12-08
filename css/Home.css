@@ -1,0 +1,534 @@
+/*========APARTADO SPOTIFY PC====*/
+.section-spotify {
+    width: 100%;
+    text-align: center;  
+}
+.section-spotify article {
+    display: inline-block;    
+    width: 40%;               
+    vertical-align: top;
+}
+/* A la de la izquierda le damos margen derecho pequeño esto lo hago porque en 27 pulgadas se ve diferente a 24*/
+.section-spotify article:first-of-type {
+    margin-right: 3%;
+}
+.section-spotify img {
+    width: 100%;
+    max-width: 850px;   
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;     
+}
+/*fin spotify PC*/
+
+
+
+/*=========APARTADO PRESENTACION PC========*/
+.presentacion {
+    width: 100%;
+}
+.presentacion  div:first-of-type {   /* div de la imagen */
+    display: inline-block;
+    width: 30%;             
+    vertical-align: top;
+    margin-right: 5%;       
+}
+
+.presentacion div img { 
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: 29%;
+    border: 5px solid var(--color-negro-claro)
+}
+
+.presentacion  div:last-of-type {    /*El contenedor de los textos*/
+    display: inline-block;
+    width: 45%;             
+    vertical-align: top;
+    margin-left: 10%;
+}
+
+/* Primer párrafo rosado*/
+.presentacion div:last-of-type p:first-of-type {
+    color: var(--color-rosa);
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 20px 50px 0px;
+    text-align: justify;
+    
+}
+/* Segundo y tercer párrafo */
+.presentacion div:last-of-type p:nth-of-type(n+2) {
+    color: var(--color-blanco);
+    font-size: 20px;
+    margin-bottom:50px    
+}
+/*fin presentacion PC*/
+
+
+
+
+/*=======APARTADO EVENTOS======*/
+.eventos {
+    width: 100%;
+    text-align: center; 
+}
+.eventos article {
+    display: inline-block;
+    width: 20%;         /* ancho de cada article */
+    margin: 20px 50px;   
+    text-align: left;   
+    padding: 12px 20px;
+    background: rgba(63, 60, 60, 0.425);
+    border: 2px solid rgba(78, 77, 77, 0.35);
+}
+/* Imagen de cada evento */
+.eventos article img {
+    width: 100%;   
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto 15px auto; /* centrada y separada del texto */
+}
+
+/* Fecha y título */
+.eventos article p {
+    font-size: 16px;
+    color: var(--color-blanco);
+}
+.eventos article h3 {
+    font-size: 18px;
+    color: var(--color-blanco);
+}
+
+.eventos article a {
+    display: inline-block;
+    width: 100%; 
+    margin: 15px auto  auto; /* centrado el boton Comprar Entradas */
+    padding: 20px 90px;       
+
+    background-color: var(--color-rosa);
+    color: var(--color-blanco);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.eventos article a:hover {
+    background-color: var(--color-carmesi);
+}
+
+
+/*==============APARTADO COCTELES========= */
+.carta_cocteles {
+    width: 100%;
+}
+/* Imagen de la izquierda */
+.carta_cocteles  div:first-of-type {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    margin-left: 10%;
+}
+.carta_cocteles div:first-of-type img {
+    width: 100%;
+    display: block;
+    border: 5px solid var(--color-negro-claro);
+}
+
+/* Contenedor de la derecha */
+.carta_cocteles div {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    margin-left: 5%;
+    color: var(--color-blanco);
+}
+
+/* Primer texto rosa*/
+.carta_cocteles p:first-child{
+    color: var(--color-rosa);
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/*Contenedor de cada coctel*/
+.carta_cocteles div article{
+    position: relative;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #777;
+    padding-bottom: 10px;
+}
+
+.carta_cocteles h3 {
+    margin: 0;
+    color: var(--color-blanco);
+}
+
+.carta_cocteles p {
+    margin: 0;
+    font-size: px;
+}
+
+/* El precio para que este en la derecha*/
+.carta_cocteles span {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-weight: bold;
+}
+
+.carta_cocteles a {
+    display: inline-block;
+    margin-left: 860px;
+    margin-top: 30px;
+    padding: 12px 40px;
+
+    background-color: var(--color-rosa);
+    color: var(--color-blanco);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.carta_cocteles a:hover {
+    background-color: var(--color-carmesi);
+}
+
+/* ========APARTADO GALERIA EN PC======*/
+.Galeria {
+    width: 100%;
+    font-size: 0; /* elimina huecos entre inline-block */
+}
+.Galeria p{
+    text-align: center;
+    font-size: 20px;
+    color: var(--color-rosa);
+    margin-bottom: 40px;
+}
+
+/* Contenedor de la imagen de la izquierda */
+.Galeria div:first-of-type {
+    cursor: pointer;
+    display: inline-block;
+    width: 40%; 
+    height: 650px;
+    margin: 5px 0px 0px 200px;
+
+}
+.Galeria div:first-of-type img {
+    width: 100%;
+    height:  99%;
+    object-fit: cover;
+    border: 5px solid var(--color-negro-claro);
+
+}
+/* Contenedor de las 4 imagenes*/
+.Galeria div:last-of-type {
+    cursor: pointer;
+    display: inline-block;
+    width:40%;
+    height: 650px;
+    vertical-align: top;
+    margin-left: 10px;
+}
+.Galeria article {
+    display: inline-block;
+    width: 48%;
+    height: 49%;
+    margin: 5px;
+    vertical-align: top;
+}
+.Galeria article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid var(--color-negro-claro);
+}
+
+/*fin del apartado galeria PC*/
+
+/*APARTADO VIP*/
+.VIP a{
+    display: inline-block;
+    margin-left: 860px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 12px 40px;
+    background-color: var(--color-rosa);
+    color: var(--color-blanco);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.VIP div{
+    margin:0px 400px 100px 400px;
+}
+.VIP p{
+    color: var(--color-blanco);
+    text-align: left;
+    margin-bottom: 20px;
+    border: 1px solid #777;
+    padding: 30px;
+    font-weight: bold;
+    
+}
+/*Si todo esto es para la flecha de reservas*/
+.VIP p:nth-child(4){
+    position: absolute;
+    bottom: -4835px;
+    left: 1410px;
+    border: 0px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.VIP p:nth-child(5){
+    position: absolute;
+    bottom: -4935px;
+    left: 1410px;
+    border: 0px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.VIP p:nth-child(6){
+    position: absolute;
+    bottom: -5035px;
+    left: 1410px;
+    border: 0px;
+    font-size: 30px;
+    cursor: pointer;
+}
+/*fin del apartado VIP PC*/
+
+/* Media query para TABLET  */
+@media (max-width: 820px) {
+    /*====APARTADO SPOTIFY EN TABLET ===*/
+    .section-spotify article{
+        width: 100%; 
+    }
+    .section-spotify article img {
+        width: 600px;  
+    }
+
+    .presentacion div:first-of-type {   /* div de la imagen */
+    width: 75%;
+    margin-left:-80px;
+
+}
+    .presentacion  div:last-of-type { 
+        display: block;
+        width: 75%;
+        margin-left:95px;
+        text-align: justify;  
+    }
+
+/*APARTADO eventos TABLET*/
+.eventos article {
+    display: inline-block;
+    width: 40%; 
+    margin: 20px 10px;   
+}
+
+.eventos article a {
+    padding: 20px;
+    text-align: center;  
+}
+.eventos article:nth-child(n+6) {
+    display: none; /*No me gusta que en movil se vean los 6, asi que apartir del 4 no estaran, asi se ven los dos primeros*/
+}
+
+.carta_cocteles a{
+    text-align: center;
+    width: 40%;
+    padding: 20px 20px;
+    margin: 0px 250px;
+}
+
+.Galeria div:first-of-type{
+    width: 40%;
+    margin: 0px 0px 0px 90px;
+}
+
+.Galeria div:first-of-type img{
+    width: 100%;
+}
+    
+.Galeria div:last-of-type{
+    width: 40%;
+    height: 100%;
+    
+}
+.Galeria div:last-of-type img{
+    width: 160%;
+    height: 50%;
+}
+.Galeria div:last-of-type article:nth-child(4){
+    display: none;
+}
+
+/*APARTADO VIP TABLET*/
+.VIP a{
+    text-align: center;
+    width: 40%;
+    padding: 10px 20px;
+    margin: 0px 250px 50px 250px;
+}
+.VIP div:first-of-type{
+    width: 80%;
+    margin: 0px 100px 0px 100px;
+}
+
+.VIP p:nth-child(4){
+    bottom: -4640px;
+    left: 650px;
+}
+.VIP p:nth-child(5){
+    bottom: -4740px;
+    left: 650px;
+}
+.VIP p:nth-child(6){
+    bottom: -4840px;
+    left: 650px;
+}
+.VIP{
+    margin-bottom: 70px;
+}
+
+}
+
+
+
+@media (max-width: 470px) {
+    /*====APARTADO SPOTIFY EN MOVIL===*/
+    .section-spotify article{
+        width: 100%; 
+    }
+    .section-spotify article img {
+        width: 400px;  /* Cambiar el tamaño a 600px en pantallas más grandes */
+    }
+    
+    /*=========APARTADO PRESENTACION MOVIL========*/
+
+.presentacion div:first-of-type {   /* div de la imagen */
+    width: 100%;
+    margin-left: -90px;
+}
+
+.presentacion div img { 
+    width: 85%;
+}
+.presentacion  div:last-of-type {    /*El contenedor de los textos*/
+    display: block;
+    width: 80%;             
+}
+
+/* Primer párrafo rosado*/
+.presentacion div:last-of-type p:first-of-type {
+    width: 100%;
+    margin-left: -50px;  
+    font-size: 18px;
+}
+/* Segundo y tercer párrafo */
+.presentacion div:last-of-type p:nth-of-type(n+2) {
+    width: 99%;
+    text-align: justify;
+    font-size: 15px;
+    margin-left: -50px;  
+
+}
+/*fin presentacion MOVIL*/
+
+
+/*====APARTADO EVENTOS EN MOVIL===*/
+.eventos article {
+    display: block;
+    width: 80%; 
+    margin: 60px 50px;   
+}
+
+.eventos article:nth-child(n+4) {
+    display: none; /*No me gusta que en movil se vean los 6, asi que apartir del 4 no estaran, asi se ven los dos primeros*/
+}
+
+/*=======APARTADO COCTELES MOVIL========= */
+
+/* Imagen de la izquierda */
+.carta_cocteles  div:first-of-type {
+    display: block;
+    width: 80%;
+}
+
+/* Contenedor de la derecha */
+.carta_cocteles div {
+    width: 80%;
+    margin:20px 0px 0px 50px;
+}
+
+/* Primer texto rosa*/
+.carta_cocteles p:first-child{
+    font-size: 20px;
+}
+.carta_cocteles h3 {
+    font-size: 17px;
+}
+.carta_cocteles p {
+    font-size: 12px;
+}
+
+.carta_cocteles a {
+    text-align: center;
+    width: 50%;
+    margin: 0px 0px 0px 100px;
+    padding: 15px 10px;
+}
+
+/*APARTADO Galeria en MOVIL*/
+.Galeria p{
+    font-size: 20px;
+    margin: 50px 90px;
+}
+.Galeria div:first-of-type {
+    width: 65%;
+    height: 100%;
+    margin: 0px 50px 20px 80px;
+}
+ 
+.Galeria div:last-of-type{
+    display: none;
+}
+
+/*APARTADO VIP en MOVIL*/
+
+.VIP a{
+    width: 50%;
+    padding:15px 2px;
+    margin: 0px 0px 20px 110px;
+}
+
+.VIP div:first-of-type{
+    width: 80%;
+    margin: 0px 0px 20px 50px;
+}
+
+.VIP div:last-of-type{
+    font-size: 15px;
+    margin-bottom:50px;
+
+}
+.VIP p:nth-child(4){
+    bottom: -3660px;
+    left: 340px;
+}
+.VIP p:nth-child(5){
+    bottom: -3560px;
+    left: 340px;
+}
+.VIP p:nth-child(6){
+    bottom: -3760px;
+    left: 340px;
+}
+
+}
+
