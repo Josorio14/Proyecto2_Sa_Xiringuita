@@ -28,7 +28,7 @@ body{
     background: rgba(17, 17, 17, 0.89); 
     border: 2px solid rgba(78, 77, 77, 0.35);
     border-radius: 60px;
-    padding: 20px 50px;
+    padding: 5px 20px;
     z-index: 1000;  
 }
 
@@ -81,7 +81,7 @@ body{
     display: block;
 }
 img[alt="logoXiringuita"]{
-    max-width: 110px;
+    max-width: 90px;
     /* margin: 20px; */
 }
 img[alt="AquiSeVive"]{
@@ -99,11 +99,12 @@ img[alt="AquiSeVive"]{
 }
 footer {
     background-color: var(--color-negro-claro);
-    padding: 50px 0 20px 0;
+    padding: 20px 0;
     text-align: center; /* centro los elementos en línea: logo y redes */
 }
 .footer-section-one > div:nth-child(1) { /*logofooter*/
     margin-bottom: 10px;
+    padding: 20px;
 }
 .footer-section-one > div:nth-child(1) img {
     width: 200px;
@@ -111,7 +112,7 @@ footer {
 
 .footer-section-one > div:nth-child(2) > a > img{ 
     width: 30px;
-    margin: 10px 10px 10px 10px;
+    margin: 10px 10px 20px 15px;
     cursor: pointer;
 }
 .footer-section-one > div:nth-child(2) { /*Esto funciona para elimnar el texto que se le crea a las imagenes al estar dentro de un enlace a*/
