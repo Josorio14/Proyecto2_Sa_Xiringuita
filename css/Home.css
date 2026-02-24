@@ -2,12 +2,10 @@
     font-family: 'Roboto';
     src: url('../assets/fonts/Roboto/Roboto-Italic-VariableFont_wdth\,wght.ttf');
 }
-
 *{
     margin: 0; padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto';
-    color: var(--color-blanco);
 }
 :root{  
     --color-negro: #121212;
@@ -16,10 +14,13 @@
     --color-rosa: #ff66c4;
     --color-carmesi: #d90037;
     --color-gris:#303030;
-    --color-footer-gris: #6e6e6e;
+    --color-footer-gris: #5a5a5a;
 }
 body{
     background-color: var(--color-negro);
+    color: var(--color-blanco);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.6;
 }
 .header-bar{ /* ======HEADER========*/
     position: fixed;
@@ -31,7 +32,6 @@ body{
     padding: 5px 20px;
     z-index: 1000;  
 }
-
 .header-bar nav{
     display: none;
     background-color: var(--color-negro);
@@ -45,39 +45,36 @@ body{
 .header-bar li{
     text-align: center;
     list-style: none;
-    margin: 20px 0px; padding: 15px;   
+    margin: 20px 0; padding: 20px 30px;         /*El padding en PC afecta por si se quiere modificar*/
     border-bottom: solid  5px var(--color-negro);
     background-color: var(--color-gris); 
 } 
-.header-bar ul{
-    position: absolute;
-    top: 120px; left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-}
-.header-bar a {
-    text-decoration: none;
-    color: var(--color-blanco);
-    font-size:20px; font-weight: bold;
-}
 .header-bar li:hover {
     background-color: var(--color-negro); 
     cursor: pointer;
     border-bottom: solid  5px var(--color-carmesi);
 }
+.header-bar ul{
+    position: absolute;
+    top: 120px; left: 10%;
+    width: 80%;
+}
+.header-bar a {
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-size: clamp(1rem, 2.5vw, 1.4rem); font-weight: bold;
+}
 #btn-menu, #btn-close{                          /*Botones del menu*/
     position: absolute;
-        width: 90%; 
-        top: 50%; right: 0;
+        width: 25px;
+        top: 32%; right: 0;
         margin-right: 40px;
-        transform: translateY(-50%);
-        max-width: 30px;
         cursor:pointer;
 }
 #btn-close {                                    /*Para que no aparezca en un inicio*/
     display: none;
 }
-#nav-menu.show ~ #btn-close { /* Mostrar el botón cerrar solo cuando el menú está visible */
+#nav-menu.show ~ #btn-close {                  /* Mostrar el botón cerrar solo cuando el menú está visible */
     display: block;
 }
 img[alt="logoXiringuita"]{
@@ -96,149 +93,99 @@ img[alt="AquiSeVive"]{
     height: 100%; width: 100%; 
     object-fit: cover;                         /* Hace que el video cubra el contenedor sin distorsionarse */
 }
-footer {
+footer {                                            /*====APARTIR DE AQUI FOOTER====*/
     background-color: var(--color-negro-claro);
     padding: 0px 0 10px 0;
     text-align: center; /* centro los elementos en línea: logo y redes */
 }
-.footer-section-one > div:nth-child(1) { /*logofooter*/
-    margin-bottom: 20px;
+footer p{
+    padding: 5px; font-size: clamp(0.8rem, 1.5vw, 0.9rem);
 }
-.footer-section-one > div:nth-child(1) img {
-    width: 200px;
-    margin-top:60px;
+footer span{
+    color: var(--color-rosa);
 }
-
-.footer-section-one > div:nth-child(2) > a > img{ 
-    width: 30px;
-    margin: 10px 10px 20px 15px;
-    cursor: pointer;
-}
-.footer-section-one > div:nth-child(2) { /*Esto funciona para elimnar el texto que se le crea a las imagenes al estar dentro de un enlace a*/
-    font-size: 0; 
-} 
-.footer-section-one > div:nth-child(2) > a:nth-child(1) > img:active{
-    content: url('../assets/Imágenes/simbolos/logoInstagramHover.png'); transform: scale(1.3);
-}
-.footer-section-one > div:nth-child(2) > a:nth-child(2) > img:active{
-    content: url('../assets/Imágenes/simbolos/logoSpotifyHover.png'); transform: scale(1.3);
-}
-.footer-section-one > div:nth-child(2) > a:nth-child(3) > img:active{
-    content: url('../assets/Imágenes/simbolos/logoTwitterHover.png'); transform: scale(1.3);
-}
-.footer-section-one > div:nth-child(2) > a:nth-child(4) > img:active{
-    content: url('../assets/Imágenes/simbolos/logoTikTokHover.png'); transform: scale(1.3);
-}
-
-.footer-section-one,
-.footer-section-two {
-    width: 90%;
+.redes_sociales, .datos_footer{
+    width: 80%;
     max-width: 300px;
-    margin: 50px auto;  
+    margin: 20px auto;  
     display: block;
 }
-
-.footer-section-two> div {
-    text-align: center ;   /* texto alineado a la izquierda */
+.redes_sociales > div:nth-child(1) img {
+    width: 70%; margin-top:90px;   margin-bottom: 20px;
+}
+.redes_sociales > address:nth-child(2) > a > img{ 
+    width: 12%; margin: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.redes_sociales > address:nth-child(2) { /*Esto funciona para elimnar el texto que se le crea a las imagenes al estar dentro de un enlace a*/
+    font-size: 0; 
+} 
+.redes_sociales address >  a:nth-child(1) > img:hover{
+    content: url('../assets/Imágenes/simbolos/logoInstagramHover.png');  transform: scale(1.3);
+}
+.redes_sociales address >  a:nth-child(2) > img:hover{
+    content: url('../assets/Imágenes/simbolos/logoSpotifyHover.png');  transform: scale(1.3);
+}
+.redes_sociales address > a:nth-child(3) > img:hover{
+    content: url('../assets/Imágenes/simbolos/logoTwitterHover.png');  transform: scale(1.3);
+}
+.redes_sociales address >  a:nth-child(4) > img:hover{
+    content: url('../assets/Imágenes/simbolos/logoTikTokHover.png');  transform: scale(1.3);
+}
+.datos_footer > address {
     padding: 10px 0;
 }
 /* Titulos */
-.footer-section-two h3 {
+.datos_footer h3{
+    font-size: clamp(1rem, 2vw, 1.2rem);
     color: var(--color-rosa);
-    margin-bottom: 10px;
+    padding: 5px;
 }
-
-/* Copyright centrado */
-footer > p:nth-of-type(1),
-footer > p:nth-of-type(2) {
+footer > p:nth-of-type(1), footer > p:nth-of-type(2) { /* Copyright centrado */
     width: 80%;
-    margin: 15px auto;      /* margen superior/inferior 0, izquierdo/derecho automático */
-    font-size: 0.8rem;
+    margin: 15px auto;      
     color: var(--color-footer-gris);
 }
 footer hr {
     width: 90%;          
     margin: 0 auto;      
     border: 1px solid var(--color-footer-gris); 
-    margin-top: 10px;
-}
-footer pre:last-child{
-    margin: 5px 0px;
-}
-footer span{
-    color: var(--color-rosa);
-
 }
 footer span:hover{
     color: var(--color-carmesi);
     cursor: pointer; transform: scale(1.1);
 }
-
-
-
-
 @media (min-width: 768px){ /* Version TABLET */
-    img[alt="logoXiringuita"]{
-    width: auto;
-    }
-    
-    
-
-    .footer-section-one,
-    .footer-section-two {
+    .redes_sociales,
+    .datos_footer{
         display: inline-block;     /* bloque lateral */
         vertical-align: top;
-        width: 39%;                /* ancho de cada bloque */
         margin: 50px 5%;              /* espacio lateral simula space-around */
     }
-    .footer-section-one{
+    .redes_sociales{
         margin: 100px 5%;              /* espacio lateral simula space-around */
     }
-    .footer-section-two > div{
+    .datos_footer > address{
         text-align: left;
     } 
-
-
 }
-
-
 @media (min-width: 992px){ /* Version PC */
-    .footer-section-one,
-    .footer-section-two {
-        width: 39%;                /* ancho de cada bloque */
-        margin: 50px 5%;              /* espacio lateral simula space-around */
+    img[alt="logoXiringuita"]{
+        max-width: 130px;
     }
-    .footer-section-one{
-        margin: 100px 5%;              /* espacio lateral simula space-around */
-    }
-    .footer-section-one{
-        margin: 100px 7%;              /* espacio lateral simula space-around */
-    }
-
-    .footer-section-one > div:nth-child(1) img {
-        width: 300px;  margin-top:0px;
-        }
-    /* Ocultar botones */
-    #btn-menu{
-        display: none;
-    }
-    .header-bar nav{                        /* Podria revisar mejor este apartado del nav en PC*/
-        display: inline-block; 
+    .header-bar nav{                        
+        display: inline-block; /*Antes tenia none, tiene que apareces*/
     }
     .header-bar ul{
-        position: absolute;
-        width: 100%; top: 0%; left:2%;
-        transform: none;
+        top: 0%; left:0%;
         text-align: center;
+        width: 100%;
     }
-img[alt="logoXiringuita"]{
-    max-width: 130px;
-}
     .header-bar li{
         display: inline-block;              /*Pone el nav en una fila eliminando en columna*/
         border: none;   
         background: none;
-        padding: 20px 30px;
     }
     .header-bar li:hover {
         background-color: rgba(255, 255, 255, 0); 
@@ -252,5 +199,18 @@ img[alt="logoXiringuita"]{
         color: var(--color-carmesi);
         transform: scale(1.2);
     } 
+    #btn-menu{     /* Ocultar botones */
+        display: none;
+    }
+    .redes_sociales,
+    .datos_footer {
+        margin: 50px 7%;              /* espacio lateral simula space-around */
+    }
+    .redes_sociales{
+        margin: 100px 7%;              /* espacio lateral simula space-around */
+    }
+    .redes_sociales> div:nth-child(1) img {
+        width: 300px;  margin-top:20%;
+        }
 }
 
